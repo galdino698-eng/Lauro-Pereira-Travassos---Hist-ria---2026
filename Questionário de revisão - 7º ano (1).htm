@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de História: Transição para a Modernidade</title>
+    <style>
+        :root { --primary: #2c3e50; --accent: #c0392b; --bg: #f4f4f4; --text: #333; }
+        body { font-family: 'Times New Roman', Times, serif; background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        header { text-align: center; border-bottom: 2px solid var(--primary); margin-bottom: 30px; }
+        h1 { margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        .section-title { background: var(--primary); color: white; padding: 10px; margin: 30px 0 15px 0; font-variant: small-caps; }
+        .question { margin-bottom: 30px; padding: 15px; border-bottom: 1px solid #eee; }
+        .question p { font-weight: bold; font-size: 1.1rem; }
+        label { display: block; margin: 10px 0; cursor: pointer; padding: 5px; transition: 0.2s; }
+        label:hover { background: #f9f9f9; }
+        input[type="radio"] { margin-right: 10px; }
+        .btn-submit { display: block; width: 100%; padding: 20px; background: var(--primary); color: white; border: none; font-size: 1.2rem; font-weight: bold; cursor: pointer; margin-top: 40px; transition: 0.3s; }
+        .btn-submit:hover { background: var(--accent); }
+        
+        /* Feedback Area */
+        #results { margin-top: 40px; display: none; padding: 20px; border: 2px solid var(--primary); }
+        .correct { color: #27ae60; font-weight: bold; }
+        .wrong { color: #c0392b; font-weight: bold; }
+        .explanation { font-style: italic; color: #666; font-size: 0.9rem; display: block; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Revisão Geral de História Moderna</h1>
+        <p>Temas: Humanismo, Renascimento, Reformas, Contrarreforma e Grandes Navegações</p>
+    </header>
+
+    <form id="quizForm">
+        <div class="section-title">I. Humanismo</div>
+        <div class="question">
+            <p>1. O Humanismo propôs uma mudança de paradigma intelectual no século XV. Qual das alternativas define essa mudança?</p>
+            <label><input type="radio" name="q1" value="0"> A negação do cristianismo em favor do ateísmo científico.</label>
+            <label><input type="radio" name="q1" value="1"> A transição do teocentrismo para o antropocentrismo, valorizando a razão.</label>
+            <label><input type="radio" name="q1" value="0"> O retorno estrito à vida rural e ao sistema feudal.</label>
+        </div>
+        <div class="question">
+            <p>2. O estudo dos clássicos greco-romanos pelos humanistas visava:</p>
+            <label><input type="radio" name="q2" value="0"> Imitar servilmente a Antiguidade sem produzir nada novo.</label>
+            <label><input type="radio" name="q2" value="1"> Recuperar valores de cidadania e virtude cívica para o homem moderno.</label>
+            <label><input type="radio" name="q2" value="0"> Destruir as universidades medievais e os textos da Escolástica.</label>
+        </div>
+        <div class="question">
+            <p>3. Erasmo de Roterdã, em "Elogio da Loucura", utiliza o pensamento humanista para:</p>
+            <label><input type="radio" name="q3" value="1"> Criticar abusos da Igreja e os costumes hipócritas da sociedade.</label>
+            <label><input type="radio" name="q3" value="0"> Defender a Inquisição como método de controle social.</label>
+            <label><input type="radio" name="q3" value="0"> Sugerir que a ciência não deve questionar a religião.</label>
+        </div>
+        <div class="question">
+            <p>4. A prensa de tipos móveis de Gutenberg foi crucial para o Humanismo porque:</p>
+            <label><input type="radio" name="q4" value="0"> Barateou apenas a produção de panfletos militares.</label>
+            <label><input type="radio" name="q4" value="1"> Permitiu a circulação rápida de ideias e textos clássicos traduzidos.</label>
+            <label><input type="radio" name="q4" value="0"> Concentrou o conhecimento nas mãos dos monges copistas.</label>
+        </div>
+        <div class="question">
+            <p>5. No currículo das "Artes Liberais" humanistas, o foco era:</p>
+            <label><input type="radio" name="q5" value="0"> O ensino puramente técnico voltado ao trabalho manual.</label>
+            <label><input type="radio" name="q5" value="1"> A formação integral em gramática, retórica, história e filosofia.</label>
+            <label><input type="radio" name="q5" value="0"> A formação militar obrigatória para todos os cidadãos.</label>
+        </div>
+
+        <div class="section-title">II. Renascimento</div>
+        <div class="question">
+            <p>6. O uso da perspectiva linear na arte renascentista representou:</p>
+            <label><input type="radio" name="q6" value="1"> A aplicação da geometria para criar profundidade e realismo tridimensional.</label>
+            <label><input type="radio" name="q6" value="0"> A manutenção da bidimensionalidade simbólica medieval.</label>
+            <label><input type="radio" name="q6" value="0"> Uma técnica para esconder erros anatômicos dos pintores.</label>
+        </div>
+        <div class="question">
+            <p>7. O mecenato consistia em:</p>
+            <label><input type="radio" name="q7" value="0"> Um imposto cobrado pela Igreja sobre os artistas.</label>
+            <label><input type="radio" name="q7" value="1"> O financiamento e proteção de artistas por papas, reis e burgueses ricos.</label>
+            <label><input type="radio" name="q7" value="0"> Uma lei que proibia o comércio de obras de arte.</label>
+        </div>
+        <div class="question">
+            <p>8. "O Príncipe" de Maquiavel é uma obra renascentista porque:</p>
+            <label><input type="radio" name="q8" value="0"> Defende que a política deve seguir estritamente a moral cristã.</label>
+            <label><input type="radio" name="q8" value="1"> Propõe a autonomia da política e o foco na realidade concreta do poder.</label>
+            <label><input type="radio" name="q8" value="0"> Justifica o poder real através do "Direito Divino".</label>
+        </div>
+        <div class="question">
+            <p>9. O Renascimento no Norte da Europa (Países Baixos) diferenciou-se pelo:</p>
+            <label><input type="radio" name="q9" value="1"> Realismo detalhista da vida cotidiana e burguesa.</label>
+            <label><input type="radio" name="q9" value="0"> Foco exclusivo em divindades mitológicas gregas.</label>
+            <label><input type="radio" name="q9" value="0"> Abandono total de temas religiosos.</label>
+        </div>
+        <div class="question">
+            <p>10. A proposição do Heliocentrismo por Copérnico significou:</p>
+            <label><input type="radio" name="q10" value="0"> A prova de que a Terra era o centro imóvel do universo.</label>
+            <label><input type="radio" name="q10" value="1"> A mudança do Sol para o centro do sistema, rompendo com o dogma medieval.</label>
+            <label><input type="radio" name="q10" value="0"> A confirmação de que os planetas seguiam órbitas quadradas.</label>
+        </div>
+
+        <div class="section-title">III. Reforma Protestante</div>
+        <div class="question">
+            <p>11. Martinho Lutero deu início à Reforma criticando principalmente:</p>
+            <label><input type="radio" name="q11" value="1"> A venda de indulgências para o perdão dos pecados.</label>
+            <label><input type="radio" name="q11" value="0"> O uso da língua alemã nas missas rurais.</label>
+            <label><input type="radio" name="q11" value="0"> O apoio da Igreja aos camponeses pobres.</label>
+        </div>
+        <div class="question">
+            <p>12. A doutrina da "Predestinação Absoluta" é o pilar central do:</p>
+            <label><input type="radio" name="q12" value="0"> Luteranismo.</label>
+            <label><input type="radio" name="q12" value="1"> Calvinismo.</label>
+            <label><input type="radio" name="q12" value="0"> Anglicanismo.</label>
+        </div>
+        <div class="question">
+            <p>13. O Ato de Supremacia (1534) de Henrique VIII resultou em:</p>
+            <label><input type="radio" name="q13" value="1"> Rompimento com o Papa e criação da Igreja Anglicana sob controle do Rei.</label>
+            <label><input type="radio" name="q13" value="0"> Aliança total com o Sacro Império Romano-Germânico.</label>
+            <label><input type="radio" name="q13" value="0"> Proibição de todas as formas de cristianismo na Inglaterra.</label>
+        </div>
+        <div class="question">
+            <p>14. Segundo Max Weber, a ética calvinista favoreceu o capitalismo porque:</p>
+            <label><input type="radio" name="q14" value="0"> Proibia o lucro e incentivava a vida contemplativa monástica.</label>
+            <label><input type="radio" name="q14" value="1"> Valorizava o trabalho, a poupança e via a riqueza como sinal de escolha divina.</label>
+            <label><input type="radio" name="q14" value="0"> Defendia o fim da propriedade privada entre os fiéis.</label>
+        </div>
+        <div class="question">
+            <p>15. O princípio luterano do "Livre Exame" defendia:</p>
+            <label><input type="radio" name="q15" value="0"> Que apenas padres poderiam interpretar as escrituras sagradas.</label>
+            <label><input type="radio" name="q15" value="1"> O acesso direto do fiel à Bíblia traduzida, sem intermediários obrigatórios.</label>
+            <label><input type="radio" name="q15" value="0"> A proibição da leitura da Bíblia por mulheres.</label>
+        </div>
+
+        <div class="section-title">IV. Contrarreforma Católica</div>
+        <div class="question">
+            <p>16. O Concílio de Trento (1545-1563) decidiu:</p>
+            <label><input type="radio" name="q16" value="1"> Reafirmar os dogmas tradicionais e os sete sacramentos.</label>
+            <label><input type="radio" name="q16" value="0"> Abolir o celibato clerical e adotar a língua alemã.</label>
+            <label><input type="radio" name="q16" value="0"> Aceitar a salvação apenas pela fé, conforme Lutero propunha.</label>
+        </div>
+        <div class="question">
+            <p>17. A Companhia de Jesus (Jesuítas) teve como missão principal:</p>
+            <label><input type="radio" name="q17" value="0"> Organizar ataques militares contra os calvinistas suíços.</label>
+            <label><input type="radio" name="q17" value="1"> A expansão da fé católica via catequese e controle da educação.</label>
+            <label><input type="radio" name="q17" value="0"> A tradução da Bíblia para as línguas vernáculas.</label>
+        </div>
+        <div class="question">
+            <p>18. O "Index Librorum Prohibitorum" era:</p>
+            <label><input type="radio" name="q18" value="1"> Uma lista de livros proibidos cujas ideias eram consideradas heréticas.</label>
+            <label><input type="radio" name="q18" value="0"> Um manual jesuíta para a conversão de indígenas.</label>
+            <label><input type="radio" name="q18" value="0"> Um catálogo de relíquias sagradas de Roma.</label>
+        </div>
+        <div class="question">
+            <p>19. A Inquisição (Santo Ofício) atuou com maior rigor em:</p>
+            <label><input type="radio" name="q19" value="1"> Portugal, Espanha e Estados Itálicos.</label>
+            <label><input type="radio" name="q19" value="0"> Inglaterra, Escócia e Holanda.</label>
+            <label><input type="radio" name="q19" value="0"> Rússia e Império Otomano.</label>
+        </div>
+        <div class="question">
+            <p>20. O Barroco, arte da Contrarreforma, caracterizava-se por:</p>
+            <label><input type="radio" name="q20" value="0"> Simplicidade técnica e ausência de símbolos religiosos.</label>
+            <label><input type="radio" name="q20" value="1"> Uso da emoção, contrastes de luz e sombra e teatralidade.</label>
+            <label><input type="radio" name="q20" value="0"> Retratos de cenas cotidianas sem fundo ou profundidade.</label>
+        </div>
+
+        <div class="section-title">V. Grandes Navegações</div>
+        <div class="question">
+            <p>21. O pioneirismo português nas navegações foi impulsionado por:</p>
+            <label><input type="radio" name="q21" value="1"> Centralização política precoce e aliança Coroa-Burguesia.</label>
+            <label><input type="radio" name="q21" value="0"> Recusa em usar bússolas e astrolábios de origem árabe.</label>
+            <label><input type="radio" name="q21" value="0"> Dependência total do comércio via Mar Mediterrâneo.</label>
+        </div>
+        <div class="question">
+            <p>22. O Tratado de Tordesilhas (1494) visava:</p>
+            <label><input type="radio" name="q22" value="0"> Proibir a Inglaterra de navegar no Oceano Atlântico.</label>
+            <label><input type="radio" name="q22" value="1"> Dividir as terras descobertas e por descobrir entre Portugal e Espanha.</label>
+            <label><input type="radio" name="q22" value="0"> Unificar as línguas de todos os países navegantes.</label>
+        </div>
+        <div class="question">
+            <p>23. O "Périplo Africano" foi a estratégia portuguesa para:</p>
+            <label><input type="radio" name="q23" value="1"> Atingir as Índias contornando o continente africano.</label>
+            <label><input type="radio" name="q23" value="0"> Atravessar o Oceano Pacífico em linha reta até a China.</label>
+            <label><input type="radio" name="q23" value="0"> Colonizar o interior do deserto do Saara.</label>
+        </div>
+        <div class="question">
+            <p>24. Com as navegações, o eixo econômico mundial deslocou-se do:</p>
+            <label><input type="radio" name="q24" value="0"> Oceano Atlântico para o Mar Cáspio.</label>
+            <label><input type="radio" name="q24" value="1"> Mar Mediterrâneo para o Oceano Atlântico.</label>
+            <label><input type="radio" name="q24" value="0"> Oceano Índico para o Mar do Norte.</label>
+        </div>
+        <div class="question">
+            <p>25. O Mercantilismo baseava-se fundamentalmente em:</p>
+            <label><input type="radio" name="q25" value="1"> Metalismo, balança comercial favorável e protecionismo.</label>
+            <label><input type="radio" name="q25" value="0"> Livre comércio absoluto sem barreiras alfandegárias.</label>
+            <label><input type="radio" name="q25" value="0"> Fim do colonialismo para fortalecer reinos estrangeiros.</label>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="processar()">Finalizar Revisão</button>
+    </form>
+
+    <div id="results">
+        <h2>Resultado Final</h2>
+        <p id="score-text"></p>
+        <div id="correction-details"></div>
+    </div>
+</div>
+
+<script>
+    const feedbacks = {
+        q1: "Humanismo focou no Antropocentrismo e racionalismo.",
+        q2: "Valorização da Virtù e da formação do cidadão moderno.",
+        q3: "Erasmo criticava a hipocrisia institucional da Igreja.",
+        q4: "A prensa acelerou a difusão do conhecimento secular.",
+        q5: "Artes Liberais visavam a formação intelectual ampla.",
+        q6: "A geometria permitiu o realismo espacial tridimensional.",
+        q7: "Mecenato era o patrocínio das elites às artes.",
+        q8: "Maquiavel defende a autonomia da política frente à moral cristã.",
+        q9: "O Norte focou no detalhismo cotidiano e burguês.",
+        q10: "Heliocentrismo: Sol no centro, Terra orbitando.",
+        q11: "O estopim foi a venda financeira de indulgências.",
+        q12: "Calvinismo defendia que Deus escolhe os eleitos previamente.",
+        q13: "O Rei tornou-se o chefe da Igreja na Inglaterra.",
+        q14: "Trabalho árduo e poupança eram sinais de eleição divina.",
+        q15: "O fiel deve ler e interpretar o texto bíblico diretamente.",
+        q16: "Trento reafirmou a tradição contra as críticas protestantes.",
+        q17: "Jesuítas focaram na expansão da fé e ensino rígido.",
+        q18: "O Index era a lista de censura de livros da Igreja.",
+        q19: "Ibéria e Itália foram os centros da repressão católica.",
+        q20: "O Barroco é a arte da emoção e do contraste dramático.",
+        q21: "Centralização política pioneira permitiu o projeto marítimo.",
+        q22: "Tordesilhas dividiu o Novo Mundo entre as potências ibéricas.",
+        q23: "Périplo: contorno sistemático da costa da África.",
+        q24: "O Atlântico tornou-se a nova rota comercial global.",
+        q25: "O Estado intervinha para acumular metais e proteger o mercado."
+    };
+
+    function processar() {
+        const form = document.getElementById('quizForm');
+        const results = document.getElementById('results');
+        const details = document.getElementById('correction-details');
+        details.innerHTML = "";
+        let acertos = 0;
+        let total = 25;
+
+        for(let i=1; i<=total; i++) {
+            const res = form.querySelector(`input[name="q${i}"]:checked`);
+            if(!res) {
+                alert("Por favor, responda a questão " + i);
+                return;
+            }
+
+            const item = document.createElement('p');
+            if(res.value === "1") {
+                acertos++;
+                item.innerHTML = `<span class="correct">Questão ${i}: Correta.</span>`;
+            } else {
+                item.innerHTML = `<span class="wrong">Questão ${i}: Incorreta.</span> <br> <small>Correção: ${feedbacks['q'+i]}</small>`;
+            }
+            details.appendChild(item);
+        }
+
+        results.style.display = "block";
+        document.getElementById('score-text').innerHTML = `Você acertou <strong>${acertos}</strong> de <strong>${total}</strong> questões (${(acertos/total*100).toFixed(1)}%).`;
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
+
+</body>
+</html>
